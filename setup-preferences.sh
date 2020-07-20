@@ -72,6 +72,9 @@ defaults write com.apple.controlstrip MiniCustomized -array com.apple.system.lau
 # Turn off Siri
 defaults write com.apple.Siri VoiceTriggerUserEnabled -int 0
 
+# Turn off double space for period
+defaults write "Apple Global Domain" NSAutomaticPeriodSubstitutionEnabled -int 1
+
 # ********
 # TEXTEDIT
 # ********

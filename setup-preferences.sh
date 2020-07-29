@@ -14,6 +14,9 @@ defaults write com.apple.dock autohide -int 1
 defaults write com.apple.dock autohide-time-modifier -float 0.5
 defaults write com.apple.dock autohide-delay -float 0
 
+# Hide recent apps
+defaults write com.apple.dock show-recents -int 0
+
 # *******
 # DESKTOP
 # *******

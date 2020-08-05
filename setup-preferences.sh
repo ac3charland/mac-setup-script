@@ -17,6 +17,16 @@ defaults write com.apple.dock autohide-delay -float 0
 # Hide recent apps
 defaults write com.apple.dock show-recents -int 0
 
+# Disable hot corners
+defaults write com.apple.dock wvous-bl-corner -int 1
+defaults write com.apple.dock wvous-bl-modifier -int 1048576
+defaults write com.apple.dock wvous-br-corner -int 1
+defaults write com.apple.dock wvous-br-modifier -int 1048576
+defaults write com.apple.dock wvous-tl-corner -int 1
+defaults write com.apple.dock wvous-tl-modifier -int 1048576
+defaults write com.apple.dock wvous-tr-corner -int 1
+defaults write com.apple.dock wvous-tr-modifier -int 1048576
+
 # *******
 # DESKTOP
 # *******

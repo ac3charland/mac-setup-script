@@ -75,6 +75,9 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 # Analog clock
 defaults write com.apple.menuextra.clock IsAnalog -int 1
 
+# Show Bluetooth
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -int 1
+
 # Control strip
 defaults write com.apple.controlstrip MiniCustomized -array com.apple.system.launchpad com.apple.system.brightness com.apple.system.volume com.apple.system.mute
 

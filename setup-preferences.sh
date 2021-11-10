@@ -63,7 +63,9 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeF
 # ********
 
 # Set color theme
+defaults write com.apple.Terminal "Default Window Settings" -string "Homebrew"
 defaults write com.apple.Terminal "Startup Window Settings" -string "Homebrew"
+defaults write com.apple.Terminal NewWindowSettingsBehavior -int 2
 
 # *******
 # NAV/TOUCH BAR

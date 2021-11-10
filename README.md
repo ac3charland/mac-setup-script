@@ -29,6 +29,7 @@ This repo is meant to streamline the setup process when setting up a new Mac for
     - Better Comments by Aaron Bond
     - ESLint by Dirk Baeumer
 1. Delete double-shift IntelliJ shortcut by opening Code > Preferences > Keyboard Shortcuts and searching "shift shift". Delete the shortcuts corresponding to "Go to File..."
+1. Turn auto save on by going to Preferences > Settings > Search "auto safe"
 1. Remove apps from the doc that you don't use, such that the remaining apps are:
     - Chrome
     - VSCode

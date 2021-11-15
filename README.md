@@ -10,6 +10,10 @@ This repo is meant to streamline the setup process when setting up a new Mac for
     - [Rectangle](https://rectangleapp.com/)
     - [Clipy](https://clipy-app.com/)
 1. Set up work email/calendars
+1. Install [Homebrew](https://brew.sh/) by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+`
+1. Install [nvm](https://github.com/nvm-sh/nvm) with `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash`
+1. Install Node with `nvm i 14` (or whatever version you want)
 1. Set up Terminal style:
     In Preferences > Profiles > Homebrew, change font size to 16pt.
 1. Set up Developer tools

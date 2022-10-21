@@ -32,7 +32,7 @@ This repo is meant to streamline the setup process when setting up a new Mac for
             ```
             cd .. && rm -rf fonts
             ```
-    1. Open `Terminal > Preferences > Profiles > (...) > Import` and import the `Agnoster.terminal` file included in this repo. Set it to default This will set the correct font, size, color, etc.
+    1. Open `Terminal > Preferences > Profiles > (...) > Import` and import the `Agnoster.terminal` file included in this repo. Set it to default. This will set the correct font, size, color, etc.
     1. Restart the Terminal.
 1. Download quality-of-life apps:
     - [Rectangle](https://rectangleapp.com/)

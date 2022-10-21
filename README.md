@@ -6,6 +6,34 @@ This repo is meant to streamline the setup process when setting up a new Mac for
 ## Instructions
 1. Once you've downloaded and unzipped this repo, open the Terminal application and run `sh setup-preferences.sh` in the project directory.
 1. Restart the computer for the changes to take effect.
+1. Download & unzip the [anachronistally-named BashProfile](https://github.com/ac3charland/BashProfile) to your location of choice
+1. Set up Developer tools
+    - In Terminal, run `git`
+    - You will be prompted to install developer tools. Install them.
+1. [Set up Terminal style](https://inspirnathan.com/posts/22-install-ohmyzsh-with-agnoster-theme/):
+    1. Install oh-my-zsh by running:
+        ```
+        sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+        ```
+    1. Update `.zshrc` with the following:
+        1. Add `source path/to/BashProfile/profile.sh` to top
+        1. Change theme to `ZSH_THEME="agnoster"`
+        1. Add `export DEFAULT_USER="$(whoami)"` under User Configuration to remove username from terminal
+    1. Install needed Agnoster fonts:
+        1. In the home directory run: 
+            ```
+            git clone https://github.com/powerline/fonts.git
+            ```
+        1. Run:
+            ```
+            cd fonts && ./install.sh
+            ```
+        1. Cleanup:
+            ```
+            cd .. && rm -rf fonts
+            ```
+    1. Open `Terminal > Preferences > Profiles > (...) > Import` and import the `Agnoster.terminal` file included in this repo. Set it to default This will set the correct font, size, color, etc.
+    1. Restart the Terminal.
 1. Download quality-of-life apps:
     - [Rectangle](https://rectangleapp.com/)
     - [Clipy](https://clipy-app.com/)
@@ -14,11 +42,6 @@ This repo is meant to streamline the setup process when setting up a new Mac for
 `
 1. Install [nvm](https://github.com/nvm-sh/nvm) with `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash`
 1. Install Node with `nvm i 14` (or whatever version you want)
-1. Set up Terminal style:
-    In Preferences > Profiles > Homebrew, change font size to 16pt.
-1. Set up Developer tools
-    - In Terminal, run `git`
-    - You will be prompted to install developer tools. Install them.
 1. Set up personal Git credentials
     - [Generate an SSH Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) by running the following: `ssh-keygen -t ed25519 -C "your_email@example.com"`
     - Copy the key to your clipboard by running `pbcopy < ~/.ssh/id_ed25519.pub`

@@ -56,9 +56,11 @@ This repo is meant to streamline the setup process when setting up a new Mac for
     - Better Comments by Aaron Bond
     - ESLint by Dirk Baeumer
     - GitLens by GitKraken
-1. Delete double-shift IntelliJ shortcut by opening Code > Preferences > Keyboard Shortcuts and searching "shift shift". Delete the shortcuts corresponding to "Go to File..."
+1. Add manual VSCode keyboard shortcut changes:
+    - Delete double-shift IntelliJ shortcut by opening Code > Preferences > Keyboard Shortcuts and searching "shift shift". Delete the shortcuts corresponding to "Go to File..."
+    - Delete `Cmd + Shift + W` binding for Close Window and assign to `gitLens.openFileOnRemote`
 1. Turn auto save on by going to Preferences > Settings > Search "auto safe"
-1. Remove apps from the doc that you don't use, such that the remaining apps are:
+1. Remove apps from the dock that you don't use, such that the remaining apps are:
     - Chrome
     - VSCode
     - Terminal

@@ -4,8 +4,14 @@
 This repo is meant to streamline the setup process when setting up a new Mac for work, a new client, etc. It follows [Pawel Grzybek's excellent article](https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/) on how to use the `defaults` command to change your Mac's System Preferences via the Terminal. It also includes instructions for other manual setup tasks, to take the guesswork out of the setup process. This script is specific to my own tastes, but should serve as a template for anyone interested in modifying it for their own use.
 
 ## Instructions
-1. Once you've downloaded and unzipped this repo, open the Terminal application and run `sh setup-preferences.sh` in the project directory.
+1. Once you've downloaded and unzipped this repo, open the Terminal application and run `sh setup.sh` in the project directory.
+    - You can also perform the manual steps below after running `setup-preferences.sh`
 1. Restart the computer for the changes to take effect.
+
+### Full Manual Steps
+1. Run `setup-preferences.sh` and restart your computer.
+1. Install [Homebrew](https://brew.sh/) by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+    - This will also install Command Line Tools, which will allow you to run `git` commands
 1. Download & unzip the [anachronistally-named BashProfile](https://github.com/ac3charland/BashProfile) to your location of choice
 1. Set up Developer tools
     - In Terminal, run `git`
@@ -34,12 +40,7 @@ This repo is meant to streamline the setup process when setting up a new Mac for
             ```
     1. Open `Terminal > Preferences > Profiles > (...) > Import` and import the `Agnoster.terminal` file included in this repo. Set it to default. This will set the correct font, size, color, etc.
     1. Restart the Terminal.
-1. Download quality-of-life apps:
-    - [Rectangle](https://rectangleapp.com/)
-    - [Clipy](https://clipy-app.com/)
 1. Set up work email/calendars
-1. Install [Homebrew](https://brew.sh/) by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-`
 1. Install [nvm](https://github.com/nvm-sh/nvm) with `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash`
 1. Install Node with `nvm i 14` (or whatever version you want)
 1. Set up personal Git credentials
@@ -51,11 +52,10 @@ This repo is meant to streamline the setup process when setting up a new Mac for
 1. In VSCode, hit `Cmd + Shift + P` to open the Command Pallette and search `Shell Command: Install 'code' command in PATH`. Run this to set up the `code` terminal command.
 1. Install the following VSCode Extensions:
     - IntelliJ IDEA Keybindings by Keisuke Kato
-    - Git History by Don Jayamanne
-    - Jest Runner by firsttris
-    - Better Comments by Aaron Bond
-    - ESLint by Dirk Baeumer
     - GitLens by GitKraken
+    - Jest by Orta
+    - Better Comments by Aaron Bond
+    - Prettier
 1. Add manual VSCode keyboard shortcut changes:
     - Delete double-shift IntelliJ shortcut by opening Code > Preferences > Keyboard Shortcuts and searching "shift shift". Delete the shortcuts corresponding to "Go to File..."
     - Delete `Cmd + Shift + W` binding for Close Window and assign to `gitLens.openFileOnRemote`

@@ -18,7 +18,7 @@ fi
 
 # Homebrew packages
 echo "Installing Homebrew packages..."
-brew install gh maccy rectangle
+brew install gh maccy rectangle pyenv jq
 pd
 
 # Folder setup
@@ -40,6 +40,12 @@ if [[ -d "$HOME/.oh-my-zsh" ]]; then
     echo "oh-my-zsh is already installed.\n"
 else
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    echo "\n# Paths\n" >> $HOME/.zshrc
+    echo '# REFRESHER:' >> $HOME/.zshrc
+    echo '# The way PATH works here is that we prepend paths to its value with <new path>:$PATH syntax' >> $HOME/.zshrc
+    echo '# So first, NVM prepends the path of the current default node version' >> $HOME/.zshrc
+    echo "# Then, Python's shims are prepended to that." >> $HOME/.zshrc
+    echo '# So when adding new languages/paths, make sure it has the format `export PATH=<new path>:$PATH`' >> $HOME/.zshrc
     pd
 fi
 echo "Installing Powerline fonts..."
@@ -104,6 +110,26 @@ else
     pd
 fi
 
+echo "Installing Python..."
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
+if ! command -v python >/dev/null 2>&1; then
+    pyenv install 3.9.9
+    pyenv global 3.3.9
+    echo "Installed Python 3.9.9.\n"
+else
+    echo "Python $(python --version) already installed.\n"
+fi
+
+echo "Adding Python to PATH..."
+if ! grep -q 'export PATH="$(pyenv root)' $HOME/.zshrc; then
+    echo 'export PATH="$(pyenv root)/shims:$PATH"' >> $HOME/.zshrc;
+    pd
+else
+    echo "Python already added to PATH.\n"
+fi
+
 # Terminal Theme
 echo "Add the Agnoster theme to your terminal."
 echo "  - Go to Terminal > Settings > Profiles" 
@@ -128,6 +154,7 @@ code --install-extension eamodio.gitlens
 code --install-extension orta.vscode-jest
 code --install-extension aaron-bond.better-comments
 code --install-extension esbenp.prettier-vscode
+code --install-extension yoavbls.pretty-ts-errors
 pd
 
 # TODO copy keybindings.json & settings.json
